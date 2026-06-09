@@ -1,0 +1,74 @@
+═══════════════════════════════════════════════════════════════════
+  Thai Compressor MRY-2A VST3 Plugin - คู่มือเริ่มต้นใช้งาน
+═══════════════════════════════════════════════════════════════════
+
+📦 ไฟล์ที่คุณได้รับ:
+  ✓ SourceCode ทั้งหมด (C++)
+  ✓ CMakeLists.txt (ไฟล์ build configuration)
+  ✓ คู่มือการ build บน Windows
+  ✓ ไฟล์ README
+
+⚡ ขั้นตอนด่วน (5 นาที):
+
+1️⃣  ติดตั้ง Visual Studio 2022 Community (ฟรี)
+   👉 https://visualstudio.microsoft.com/downloads/
+   - เลือก "Desktop development with C++"
+
+2️⃣  ติดตั้ง JUCE Framework
+   👉 https://juce.com/download/
+   - แตกไฟล์ลงใน C:\JUCE
+
+3️⃣  เตรียมไฟล์ Source Code
+   - สร้าง folder: C:\ThaiCompressorVST
+   - คัดลอกไฟล์ทั้งหมดจากที่นี่ลงไป
+
+4️⃣  เปิด Command Prompt และพิมพ์:
+   
+   cd C:\ThaiCompressorVST
+   mkdir build
+   cd build
+   cmake -G "Visual Studio 17 2022" -A x64 -DCMAKE_PREFIX_PATH=C:\JUCE ..
+   cmake --build . --config Release
+
+5️⃣  รอ Compile เสร็จ (ใช้เวลา 5-10 นาที)
+
+6️⃣  ไฟล์ .vst3 จะอยู่ที่:
+   C:\ThaiCompressorVST\build\ThaiCompressorVST_artefacts\Release\VST3\
+
+7️⃣  คัดลอกไฟล์ .vst3 ไปที่:
+   C:\Program Files\Common Files\VST3\
+
+8️⃣  เปิด Studio One → Preferences → Plug-ins → Rescan
+
+✅ เสร็จแล้ว! ค้นหา "Thai Compressor" ในไลบรารี่ plugin
+
+═══════════════════════════════════════════════════════════════════
+
+❓ ปัญหาที่อาจเกิดขึ้น:
+
+Q: CMake ไม่พบ JUCE
+A: ตรวจสอบว่าเปลี่ยน C:\JUCE ให้ตรงกับที่คุณติดตั้ง
+
+Q: Visual Studio ไม่พบ
+A: ติดตั้ง Visual Studio 2022 Community ใหม่
+
+Q: Compilation Error
+A: ลองลบ build folder และสร้างใหม่
+
+═══════════════════════════════════════════════════════════════════
+
+📚 ไฟล์ที่ต้องอ่าน:
+  - BUILD_INSTRUCTIONS_TH.md (คู่มือ Thai)
+  - BUILD_INSTRUCTIONS_EN.md (คู่มือ English)
+  - README.md (รายละเอียดเทคนิค)
+
+🎵 ฟีเจอร์:
+  ✓ Gain Control (-40 to +40 dB)
+  ✓ Peak Reduction (0-40 dB)
+  ✓ Output Control (-20 to +20 dB)
+  ✓ Real-time VU Meter
+  ✓ Thai-Inspired Design
+
+═══════════════════════════════════════════════════════════════════
+Version 1.0.0 | Windows 10/11 | VST3 64-bit | Studio One Compatible
+═══════════════════════════════════════════════════════════════════
